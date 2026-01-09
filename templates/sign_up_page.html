@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block seo %}
+<meta charset="UTF-8">
+<title>Sign Up – Join DotCoder for Free AI Website Generation</title>
+<meta name="title" content="Sign Up – Join DotCoder for Free AI Website Generation">
+<meta name="description" content="Create your free DotCoder account to start building websites and apps using just prompts. AI writes the code for you – HTML, Tailwind CSS, React, JavaScript, and more.">
+<meta name="keywords" content="DotCoder sign up, create account, AI coding signup, prompt to website, join DotCoder, AI website builder, AI coding tool, best vibe coding tool">
+<meta name="author" content="DotCoder Team">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="Sign Up – Join DotCoder for Free AI Website Generation">
+<meta property="og:description" content="Sign up for DotCoder and start building websites with AI instantly. Write prompts, get working code.">
+<meta property="og:image" content="https://dotcoder.site/static/icons/dotcoder-logo.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+<meta property="twitter:title" content="Sign Up – Start Using DotCoder for Free">
+<meta property="twitter:description" content="Create your DotCoder account and begin generating websites using AI. No coding knowledge required.">
+<meta property="twitter:image" content="https://dotcoder.site/static/icons/dotcoder-logo.png">
+<link rel="stylesheet" href="{% static 'css/sign-up-page.css' %}">
+{% endblock %}
+
+{% block Structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DotCoder",
+  "url": "{{ request.scheme }}://{{ request.get_host }}/",
+  "description": "Sign up for DotCoder to build websites and applications by simply writing prompts. AI handles the code. HTML, Tailwind, React, and more supported.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "DotCoder"
+  },
+  "potentialAction": {
+    "@type": "RegisterAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ request.scheme }}://{{ request.get_host }}/"
+    },
+    "name": "Sign Up for DotCoder"
+  }
+}
+</script>
+{% endblock %}
+
+{% block header_links %}
+<a href="/sign-in/" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">Sign In</a>
+{% endblock %}
+
+{% block body %}
+<main class="flex-1 flex items-center justify-center p-4">
+    <div class="max-w-md w-full mx-auto">
+        <!-- Logo and Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="logo-gradient w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-xl text-black dark:text-white group-hover:opacity-80 transition shadow-lg">
+                        DC
+                    </div>
+                    <span class="text-2xl font-bold"><span class="text-black dark:text-white">Dot</span><span class="gradient-text bg-gradient-to-r from-indigo-500 via-blue-500 to-sky-500 dark:from-indigo-400 dark:via-blue-400 dark:to-sky-400">Coder</span></span>
+                </a>
+            </div>
+            
+            <!-- Welcome Message -->
+            <div class="mb-6">
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Join DotCoder</h1>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">Transform your ideas into code with AI</p>
+                
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
+            <form id="signup-form">
+                <div class="space-y-4">
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">First Name</label>
+                            <input value="Abdullah" type="text" id="first-name" name="first-name" required class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Last Name</label>
+                            <input value="Tariq" type="text" id="last-name" name="last-name" required class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <!-- Username Field -->
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Username</label>
+                        <input value="abdullahtariq" type="text" id="username" name="username" required class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:order-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                        <input value="abdullahtariq977961@gmail.com" type="email" id="email" name="email" required class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <!-- Password Field -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Password</label>
+                        <input value="12345678" type="password" id="password" name="password" required minlength="8" class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Minimum 8 characters</p>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div>
+                        <label for="confirm-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Confirm Password</label>
+                        <input value="12345678" type="password" id="confirm-password" name="confirm-password" required minlength="8" class="input-field w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <!-- Terms Checkbox -->
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="terms" name="terms" type="checkbox" required class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700">
+                        </div>
+                        <div class="ml-3">
+                            <label for="terms" class="text-sm text-gray-700 dark:text-gray-300">
+                                I agree to the <a href="/terms-conditions" class="text-blue-600 dark:text-blue-400 hover:underline">Terms of Service</a> and <a href="/privacy-policy" class="text-blue-600 dark:text-blue-400 hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- reCAPTCHA Widget -->
+                    <div class="mt-4">
+                        <div class="g-recaptcha" data-sitekey="6LfTtoorAAAAAEFjkZwHI7soJRZR831rZhZgZAhV"></div>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="pt-2">
+                        <button type="submit" id="signup-btn" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex items-center justify-center gap-2">
+                            <span id="signup-btn-text">Create Account</span>
+                            <svg id="signup-btn-spinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Custom Message Box -->
+                    <div id="message-box" class="hidden mt-4 p-3 rounded-lg border animate-fade-in">
+                        <div class="flex items-center">
+                            <div id="message-icon" class="flex-shrink-0 mr-3"></div>
+                            <div id="message-text" class="text-sm font-medium"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-6 pt-6">
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Already have an account?
+                        <a href="/sign-in" class="font-medium text-blue-600 dark:text-blue-400 hover:underline">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Verification Section -->
+        <div id="verification-section" class="hidden mt-6 form-container rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 sm:p-8">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 dark:bg-green-900 mb-4">
+                    <svg class="h-6 w-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">Check your email</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                    We've sent a verification link to <span id="user-email" class="font-medium text-gray-900 dark:text-gray-100"></span>
+                </p>
+                
+                <div class="space-y-3">
+                    <button id="open-gmail-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                        </svg>
+                        Open Gmail
+                    </button>
+                    
+                    <button id="resend-btn" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2">
+                        <svg id="resend-spinner" class="animate-spin h-4 w-4 hidden" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                        </svg>
+                        <svg id="resend-icon" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        <span id="resend-text">Resend verification email</span>
+                    </button>
+                    
+                    <!-- Resend Message Area -->
+                    <div id="resend-message" class="hidden text-center text-sm mt-2">
+                        <span id="resend-message-text"></span>
+                    </div>
+                </div>
+                
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-4">
+                    Didn't receive the email? Check your spam folder or try resending.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+<script src="{% static 'js/sign-up-page.js' %}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}

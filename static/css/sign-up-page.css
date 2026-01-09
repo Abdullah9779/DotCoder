@@ -1,0 +1,15 @@
+.input-field {
+    transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+    border-color: #3b82f6;
+}
+
+.btn-primary {
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
