@@ -10,3 +10,6 @@ def sign_up_page(request):
 
 def sign_in_page(request):
     return render(request, 'sign_in_page.html')
+
+def reset_password_page(request):
+    return render(request, 'reset_password_page.html')
