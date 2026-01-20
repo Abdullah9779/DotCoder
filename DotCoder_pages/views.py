@@ -13,3 +13,6 @@ def sign_in_page(request):
 
 def reset_password_page(request):
     return render(request, 'reset_password_page.html')
+
+def get_email_verification_link_page(request):
+    return render(request, 'request_email_verification_page.html')
