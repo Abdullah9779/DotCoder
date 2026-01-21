@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+<meta name="title" content="Terms & Conditions | DotCoder">
+<meta name="description"
+    content="Review DotCoder's Terms & Conditions. Understand the legal terms for using our AI-powered website builder and coding platform. Effective July 25, 2025.">
+<meta name="keywords"
+    content="DotCoder terms, website builder terms, AI coding platform legal, terms of service, legal agreement, code generation terms, project hosting terms">
+<meta name="author" content="DotCoder Team">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="Terms & Conditions | DotCoder - AI Website Builder Legal Terms">
+<meta property="og:description"
+    content="Review DotCoder's Terms & Conditions. Understand the legal terms for using our AI-powered website builder and coding platform.">
+<meta property="og:image" content="https://dotcoder.site/static/icons/dotcoder-logo.png">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+<meta property="twitter:title" content="Terms & Conditions | DotCoder - AI Website Builder Legal Terms">
+<meta property="twitter:description"
+    content="Review DotCoder's Terms & Conditions. Understand the legal terms for using our AI-powered website builder and coding platform.">
+<meta property="twitter:image" content="https://dotcoder.site/static/icons/dotcoder-logo.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DotCoder">
+<link rel="apple-touch-icon" href="https://dotcoder.site/static/icons/dotcoder-logo.png">
+<link rel="stylesheet" href="{{ static }} css/terms-conditions-page.css">
+{% endblock %}
+
+{% block Structured_data %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms & Conditions | DotCoder",
+    "url": "{{ request.scheme }}://{{ request.get_host }}/",
+    "description": "Review DotCoder's Terms & Conditions. Understand the legal terms for using our AI-powered website builder and coding platform.",
+    "isPartOf": {
+        "@type": "WebSite",
+        "name": "DotCoder",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/"
+    },
+    "about": {
+        "@type": "Organization",
+        "name": "DotCoder",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "logo": "https://dotcoder.site/static/icons/dotcoder-logo.png"
+    },
+    "datePublished": "2025-07-25",
+    "dateModified": "2025-07-25",
+    "author": {
+        "@type": "Organization",
+        "name": "DotCoder Team"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "DotCoder",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://dotcoder.site/static/icons/dotcoder-logo.png"
+        }
+    }
+}
+</script>
+{% endblock %}
+
+<script>
+    tailwind.config = {
+        darkMode: 'class'
+    }
+</script>
+
+{% block header_links %}
+<a href="/" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">Back to Home</a>
+{% endblock %}
+
+{% block body %}
+<main class="container mx-auto px-4 py-12 max-w-4xl">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Terms & Conditions</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+            Effective Date: July 25, 2025 | Last Updated: July 25, 2025
+        </p>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6 md:p-8">
+        <p class="mb-6 text-gray-600 dark:text-gray-400">
+            Welcome to DotCoder! By using our website and services, you agree to the following terms:
+        </p>
+
+        <div class="space-y-12">
+            <!-- Section 1 -->
+            <section id="use-of-services" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</span>
+                    Use of Our Services
+                </h2>
+                <div class="ml-11">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>You must be 13 years or older to use DotCoder.</li>
+                        <li>You agree not to misuse or attempt to disrupt the platform.</li>
+                        <li>All code generated or shared must comply with applicable laws.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="user-accounts" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</span>
+                    User Accounts
+                </h2>
+                <div class="ml-11">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>You are responsible for your account credentials.</li>
+                        <li>You may reset your password via email verification.</li>
+                        <li>DotCoder is not liable for any unauthorized access due to user negligence.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="code-generation" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</span>
+                    Code Generation & Projects
+                </h2>
+                <div class="ml-11">
+                    <p class="mb-4 text-gray-600 dark:text-gray-400">
+                        DotCoder allows you to generate and preview HTML, Tailwind CSS, JavaScript, and React code
+                        using natural language prompts.
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>Projects can be saved, previewed, downloaded, and optionally published to a public URL.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="public-projects" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">4</span>
+                    Public Projects
+                </h2>
+                <div class="ml-11">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>Publishing a project is optional.</li>
+                        <li>Once published, it becomes publicly visible at a unique URL.</li>
+                        <li>Users cannot unpublish, but may delete the project at any time.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="intellectual-property" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">5</span>
+                    Intellectual Property
+                </h2>
+                <div class="ml-11">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>All content and tools on DotCoder are owned by DotCoder unless otherwise noted.</li>
+                        <li>Users retain rights to their original code but grant DotCoder permission to display
+                            public projects.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="limitation-liability" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">6</span>
+                    Limitation of Liability
+                </h2>
+                <div class="ml-11">
+                    <p class="mb-4 text-gray-600 dark:text-gray-400">
+                        DotCoder is provided "as-is." We make no guarantees about uptime, accuracy, or uninterrupted
+                        use. We are not responsible for:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>Data loss</li>
+                        <li>System errors or crashes</li>
+                        <li>External misuse of public projects</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="termination" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">7</span>
+                    Termination
+                </h2>
+                <div class="ml-11">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        We reserve the right to suspend or terminate accounts that violate these terms or engage in
+                        harmful behavior.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 8 -->
+            <section id="legal-jurisdiction" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">8</span>
+                    Legal Jurisdiction
+                </h2>
+                <div class="ml-11">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        These terms are governed by the laws of Pakistan. Any disputes will be handled under its
+                        jurisdiction.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 9 -->
+            <section id="contact-us" class="terms-section">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <span
+                        class="logo-gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">9</span>
+                    Contact Us
+                </h2>
+                <div class="ml-11">
+                    <p class="mb-4 text-gray-600 dark:text-gray-400">
+                        If you have questions regarding these terms:
+                    </p>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            Email: <a href="mailto:support@dotcoder.site"
+                                class="text-blue-600 dark:text-blue-400 hover:underline ml-1">support@dotcoder.site</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                            Website: <a href="https://dotcoder.site/"
+                                class="text-blue-600 dark:text-blue-400 hover:underline ml-1">https://dotcoder.site</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+<script src="{{ static }} js/terms-conditions-page.js"></script>

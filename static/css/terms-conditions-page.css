@@ -1,0 +1,19 @@
+.terms-section {
+    scroll-margin-top: 100px;
+}
+
+.terms-section h2 {
+    color: #1f2937;
+}
+
+.dark .terms-section h2 {
+    color: #f9fafb;
+}
+
+main h1 {
+    color: #1f2937;
+}
+
+.dark main h1 {
+    color: #f9fafb;
+}
