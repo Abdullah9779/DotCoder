@@ -16,3 +16,8 @@ def reset_password_page(request):
 
 def get_email_verification_link_page(request):
     return render(request, 'request_email_verification_page.html')
+
+def terms_and_conditions_page(request):
+    return render(request, 'terms_and_conditions_page.html')
+
+
